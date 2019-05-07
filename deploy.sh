@@ -10,6 +10,7 @@ docker push umeshvjti/multi-client:$SHA
 docker push umeshvjti/multi-server:$SHA
 docker push umeshvjti/multi-worker:$SHA
 
+
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=umeshvjti/multi-server:$SHA
 kubectl set image deployments/client-deployment client=umeshvjti/multi-client:$SHA
